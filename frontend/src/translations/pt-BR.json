@@ -1,0 +1,47 @@
+{
+    "home": {
+        "newCustomer": "Novo Registro"
+    },
+    "form": {
+        "fullName": "Nome Completo",
+        "socialNumber": "CPF",
+        "email": "Email",
+        "favoriteColor": "Cor preferida",
+        "notes": "Observações",
+        "registerCustomer": "Cadastrar Cliente",
+        "editCustomer": "Editar Cliente",
+        "loading":"Aguarde ...",
+        "colors": {
+            "red": "Vermelho",
+            "orange": "Laranja",
+            "yellow": "Amarelo",
+            "green": "Verde",
+            "blue": "Azul",
+            "indigo": "Índigo",
+            "violet": "Violeta"
+        },
+        "selectColor": "Selecione uma cor",
+        "buttons": {
+            "create":"Criar",
+            "save":"Salvar",
+            "delete":"Excluir",
+            "cancel":"Cancelar"
+        },
+        "messages": {
+            "registerSuccess": "Cliente cadastrado com sucesso!",
+            "updateSuccess": "Cliente atualizado com sucesso!",
+            "deleteSuccess": "Cliente excluído com sucesso!",
+            "deleteError": "Ocorreu um erro ao excluir os dados."
+        },
+        "validation": {
+            "fullnameRequired":"Nome é obrigatório",
+            "socialNumberRequired":"CPF é obrigatório",
+            "emailRequired":"E-mail é obrigatório",
+            "invalidEmail":"E-mail inválido",
+            "invalidSocialNumber":"CPF inválido",
+            "cpf_already_exists": "CPF já cadastrado.",
+            "email_already_exists": "Email já cadastrado."
+        }
+    },
+    "empty": "Parece que não há nada por aqui :("
+}

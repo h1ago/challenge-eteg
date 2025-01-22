@@ -1,0 +1,28 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+  backend:
+    build:
+      context: ./backend
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/eteg
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: novafase
+      POSTGRES_DB: eteg
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  postgres-data:
