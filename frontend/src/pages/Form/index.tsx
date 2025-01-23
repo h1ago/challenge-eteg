@@ -12,7 +12,7 @@ import {
 import { Controller, useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import i18n from 'i18next';
-import { showToast } from './helpers';
+import { showToast, validateCPF } from './helpers';
 
 interface Props {
   onClose: () => void;
@@ -107,10 +107,7 @@ const Form = ({ record, onClose }: Props) => {
           control={control}
           rules={{
             required: i18n.t('form.validation.socialNumberRequired'),
-            pattern: {
-              value: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
-              message: i18n.t('form.validation.invalidSocialNumber'),
-            },
+            validate: validateCPF,
           }}
           render={({ field }) => (
             <InputMask
